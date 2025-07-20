@@ -39,6 +39,8 @@ _**Completion State:**_ Unauthorized TOR usage is confirmed through forensic ana
 - **EDR Platform:** Microsoft Defender for Endpoint (MDE)
 - **Query Language:** Kusto Query Language (KQL)
 - **Browser Detected:** Tor Browser
+ 
+---
 
 ##  Scenario Description
 
@@ -206,12 +208,12 @@ DeviceNetworkEvents
 
 ## Summary
 
-The user "labmalaya" on the "malaya-mde-test" device initiated and completed the installation of the TOR browser. They proceeded to launch the browser, establish connections within the TOR network, and created various files related to TOR on their desktop, including a file named `tor-shopping-list.txt`. This sequence of activities indicates that the user actively installed, configured, and used the TOR browser, likely for anonymous browsing purposes, with possible documentation in the form of the "shopping list" file.
+The threat hunt revealed that user "labmalaya" on the device "malaya-mde-test" downloaded and silently installed the TOR browser. The user then launched the TOR browser, established multiple encrypted network connections (including to known TOR entry nodes) and created a file named `tor-shopping-list.txt` on the desktop, possible logging intended activity. This sequence of activities confirmed unauthorized TOR usage in violation of acceptable use policies.
 
 ---
 
 ## Response Taken
 
-TOR usage was confirmed on the endpoint `malaya-mde-test` by the user `labmalaya`. The device was isolated, and the user's direct manager was notified.
-
----
+- Device `malaya-mde-test` was isolated from the network.
+- User's manager was notified for further HR and disciplinary review.
+- Full threat hunt report including timeline and evidence were submitted to incident response team.
