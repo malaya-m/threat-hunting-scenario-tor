@@ -1,17 +1,50 @@
+
 <img width="300" src="https://github.com/user-attachments/assets/44bac428-01bb-4fe9-9d85-96cba7698bee" alt="Tor Logo with the onion and a crosshair on it"/>
-
 # Threat Hunt Report: Unauthorized TOR Usage
-- [Scenario Creation](https://github.com/malaya-m/threat-hunting-scenario-tor/blob/main/threat-hunting-scenario-tor-event-creation.md)
 
-## Platforms and Languages Leveraged
-- Windows 10 Virtual Machine (Microsoft Azure)
-- EDR Platform: Microsoft Defender for Endpoint (MDE)
-- Kusto Query Language (KQL)
-- Tor Browser
+## Table of Contents
 
-##  Scenario
+- [Project Overview](#project-overview)
+- [Platforms and Tools](#platforms-and-tools)
+- [Scenario Description](#scenario-description)
+- [Threat Hunt Steps Taken](#threat-hunt-steps-taken)
+- [Chronological Event Timeline](#chronological-event-timeline)
+- [MITRE ATT&CK Techniques Mapped](#mitre-att&ck-techniques-mapped)
+- [Detection Gaps & Recommendations](#detection-gaps-&-recommendations)
+- [Summary](#summary)
+- [Response Taken](#response-taken)
+
+
+## Project Overview
+
+This project simulates a real-world **threat hunting engagement** focused on detecting unauthorized TOR browser usage within a corporate environment using Microsoft Defender for Endpoint (MDE) and Kusto Query Language (KQL).
+
+The project walks through the full detection and response lifecycle: identifying indicators of compromise (IoCs), querying telemetry for suspicious file, process, and network events, validating TOR browser execution, and documenting investigative findings in a clear, actionable report.
+
+_**Inception State:**_ Management suspects potential TOR usage on the network but lacks evidence or confirmed IoCs.
+
+_**Completion State:**_ Unauthorized TOR usage is confirmed through forensic analysis; a timeline of malicious activity is constructed; response actions are taken, including device isolation and escalation to management.
+
+### Impact Summary
+- **TOR usage confirmed** through correlated evidence across file, process, and network activity
+- **6 key forensic artifacts identified%** including installer execution, browser launch, and outbound connections to known TOR ports/IPs
+- **Suspicious file%** `tor-shopping-list.txt` found post-browsing session
+- **Response executed:** Device was isolated and employee's manager was alerted 
+- **Report documented** for security awareness, auditability, and policy reinforcement
+
+---
+
+## Platforms and Tools
+- **OS:** Windows 10 Virtual Machine (Microsoft Azure)
+- **EDR Platform:** Microsoft Defender for Endpoint (MDE)
+- **Query Language:** Kusto Query Language (KQL)
+- **Browser Detected:** Tor Browser
+
+##  Scenario Description
 
 Management suspects that some employees may be using TOR browsers to bypass network security controls because recent network logs show unusual encrypted traffic patterns and connections to known TOR entry nodes. Additionally, there have been anonymous reports of employees discussing ways to access restricted sites during work hours. The goal is to detect any TOR usage and analyze related security incidents to mitigate potential risks. If any use of TOR is found, notify management.
+
+- [Scenario Creation](https://github.com/malaya-m/threat-hunting-scenario-tor/blob/main/threat-hunting-scenario-tor-event-creation.md)
 
 ### High-Level TOR-Related IoC Discovery Plan
 
@@ -21,7 +54,7 @@ Management suspects that some employees may be using TOR browsers to bypass netw
 
 ---
 
-## Steps Taken
+## Threat Hunt Steps Taken
 
 ### 1. Searched the `DeviceFileEvents` Table
 
