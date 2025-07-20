@@ -182,10 +182,10 @@ DeviceNetworkEvents
 
 | Tactic             | Technique                         | ID         | Description                                         |
 |--------------------|-----------------------------------|------------|-----------------------------------------------------|
-| Execution          | User Execution: Malicious File    | T1204.002  | Silent execution of portable app                    |
-| Command and Control| Proxy: Multi-hop Proxy            | T1090.003  | TOR used as anonymous proxy                         |
-| Defense Evasion    | Masquerading: Match Legitimate Name or Location | T1036.005  | TOR run as `firefox.exe` in user path |
-| Discovery          | System Information Discovery      | T1082      | Evidence of browsing/network enumeration            |
+| Execution          | T1204.002  | User Execution: Malicious File    | Silent execution of portable app                    |
+| Command and Control| T1090.003  | Proxy: Multi-hop Proxy            | TOR used as anonymous proxy                         |
+| Defense Evasion    | T1036.005  | Masquerading: Match Legitimate Name or Location | TOR run as `firefox.exe` in user path |
+| Discovery          | T1082      | System Information Discovery      | Evidence of browsing/network enumeration            |
 
 
 ---
