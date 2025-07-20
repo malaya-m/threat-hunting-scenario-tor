@@ -76,7 +76,7 @@ DeviceFileEvents
 ## Created By:
 - **Author Name**: Malaya Manacop
 - **Author Contact**: https://www.linkedin.com/in/malaya-m/
-- **Date**: July 18, 2025
+- **Date**: July 19, 2025
 
 ## Validated By:
 - **Reviewer Name**: 
@@ -93,4 +93,4 @@ DeviceFileEvents
 ## Revision History:
 | **Version** | **Changes**                   | **Date**         | **Modified By**   |
 |-------------|-------------------------------|------------------|-------------------|
-| 1.0         | Initial draft                  | `July  18, 2025`  | `Malaya Manacop`   
+| 1.0         | Initial draft                  | `July  19, 2025`  | `Malaya Manacop`   
