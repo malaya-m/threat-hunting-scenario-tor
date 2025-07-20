@@ -178,6 +178,26 @@ DeviceNetworkEvents
 
 ---
 
+## MITRE ATT&CK Techniques Mapped
+
+
+
+---
+## Detection Gaps & Recommendations
+
+### Detection Gaps
+- TOR was installed using a silent switch (`/S`), which may evade basic user alerts.
+- Executables were named similarly to benign programs (e.g., `firefox.exe`).
+- Network detection required correlation with non-standard ports.
+
+### Recommendations
+- Implement custom MDE alerts for high-risk `.exe` in user download directories.
+- Block known TOR ports (`9001`, `9050`, `9150`) at the firewall unless business need is documented.
+- Monitor user profile folders for portable applications with anonymizing features.
+- Create detection rules based on directory structure (e.g., `TorBrowser\Tor\tor.exe` path pattern).
+
+---
+
 ## Summary
 
 The user "labmalaya" on the "malaya-mde-test" device initiated and completed the installation of the TOR browser. They proceeded to launch the browser, establish connections within the TOR network, and created various files related to TOR on their desktop, including a file named `tor-shopping-list.txt`. This sequence of activities indicates that the user actively installed, configured, and used the TOR browser, likely for anonymous browsing purposes, with possible documentation in the form of the "shopping list" file.
