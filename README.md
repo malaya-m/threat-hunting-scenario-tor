@@ -9,8 +9,8 @@
 - [Scenario Description](#scenario-description)
 - [Threat Hunt Steps Taken](#threat-hunt-steps-taken)
 - [Chronological Event Timeline](#chronological-event-timeline)
-- [MITRE ATT&CK Techniques Mapped](#mitre-att&ck-techniques-mapped)
-- [Detection Gaps & Recommendations](#detection-gaps-and-recommendations)
+- [MITRE ATT&CK Techniques Mapped](#mitre-attck-techniques-mapped)
+- [Detection Gaps & Recommendations](#detection-gaps--recommendations)
 - [Summary](#summary)
 - [Response Taken](#response-taken)
 
@@ -180,6 +180,12 @@ DeviceNetworkEvents
 
 ## MITRE ATT&CK Techniques Mapped
 
+| Tactic             | Technique                         | ID         | Description                                         |
+|--------------------|-----------------------------------|------------|-----------------------------------------------------|
+| Execution          | User Execution: Malicious File    | T1204.002  | Silent execution of portable app                    |
+| Command and Control| Proxy: Multi-hop Proxy            | T1090.003  | TOR used as anonymous proxy                         |
+| Defense Evasion    | Masquerading: Match Legitimate Name or Location | T1036.005  | TOR run as `firefox.exe` in user path |
+| Discovery          | System Information Discovery      | T1082      | Evidence of browsing/network enumeration            |
 
 
 ---
