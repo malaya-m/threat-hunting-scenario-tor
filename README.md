@@ -216,4 +216,4 @@ The threat hunt revealed that user "labmalaya" on the device "malaya-mde-test" d
 
 - Device `malaya-mde-test` was isolated from the network.
 - User's manager was notified for further HR and disciplinary review.
-- Full threat hunt report including timeline and evidence were submitted to incident response team.
+- Full threat hunt report, including timeline and evidence, was submitted to the incident response team.
