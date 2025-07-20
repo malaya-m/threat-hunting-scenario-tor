@@ -10,7 +10,7 @@
 - [Threat Hunt Steps Taken](#threat-hunt-steps-taken)
 - [Chronological Event Timeline](#chronological-event-timeline)
 - [MITRE ATT&CK Techniques Mapped](#mitre-att&ck-techniques-mapped)
-- [Detection Gaps & Recommendations](#detection-gaps-&-recommendations)
+- [Detection Gaps & Recommendations](#detection-gaps-and-recommendations)
 - [Summary](#summary)
 - [Response Taken](#response-taken)
 
